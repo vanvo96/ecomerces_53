@@ -1,6 +1,25 @@
 en:
   hello: "Hello world"
   base_title: "Rmobile"
+  users:
+    welcome: "Welcome !!!"
+    profile: "Profile"
+    log_out: "Log out"
+    login: "Login"
+    signup: "Sign up"
+    invalid: "Invalid email/password combination"
+    log_in: "Log in"
+    sign_up: "Sign up now!"
+    error_form: "The form contains"
+    create_account: "Create my account"
+    empty: "Empty"
+    error: "error"
+    confirm: "Confirmation"
+    name: "Name"
+    email: "Email"
+    phone: "Phone"
+    password: "Password"
+
   static_page:
     home:
       hello: "Hello World"

@@ -89,14 +89,25 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right text-center">
-          <li>
-            <a href="#" data-toggle="modal" data-target="#myModal" class="boxmodal">
-              <i class="fas fa-user small-icon"></i><br>
-              <span class="txt-small"><%= t ".signuplogin" %></span>
-            </a>
-          </li>
+          <% if logged_in? %>
+            <li><%= link_to(t("users.welcome.profile"), current_user) %></li>
+            <li><%= link_to(t("users.log_out"), logout_path, method: :delete) %></li>
+          <% else %>
+            <li>
+              <a href="login" >
+                <i class="fas fa-user small-icon"></i><br>
+                <span class="txt-small"><%= t "user.login" %></span>
+              </a>
+            </li>
+
+            <li>
+              <a href="signup">
+                <i class="fas fa-user small-icon"></i><br>
+                <span class="txt-small"><%= t "user.signup" %></span>
+              </a>
+            </li>
+          <% end %>
         </ul>
-      </div><!-- /.navbar-collapse -->
+      </div>
     </div>
   </nav>
-  <!-- end top-menu -->
