@@ -36,4 +36,8 @@ $(document).ready(function(){
     $('.clickdn').removeClass('background-on');
   });
 
+  $('.if_check label').click(function(){
+    $('.checked').show();
+  });
+
 });

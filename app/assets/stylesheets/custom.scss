@@ -179,6 +179,7 @@ li, a:hover{
 }
 .modalbox button{
   padding: 9px 18px 9px 18px;
+  background: #29d4009c;
   border-radius: 5px;
   border: none;
   font-size: 19px;
@@ -218,30 +219,78 @@ li, a:hover{
   font-size: 20px;
 }
 .x{
-  color: red!important;
-  padding: 3px 10px 4px 10px!important;
+  color: red;
+  padding: 3px 10px 4px 10px;
   font-size: 21px;
   position: absolute;
   right: 1px;
   top: 1px;
-  background: #4dd2eb!important;
 }
 
 .dk{
-  text-decoration: underline!important;
-  background: none!important;
-  font-size: 21px!important;
-  padding: 4px!important;
-  color: #227400!important;
+  color: #4ae81a;
+  text-decoration: underline;
+  padding: 0px;
+  background: none;
+  font-size: 15px;
 }
 
-.background-on{
-  background: #29d4009c;
-  color: white;
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.background-off{
-  background: #7ed0dcb3;
-  color: white;
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }
 
 /* trang cua admin*/
@@ -766,4 +815,8 @@ body {
 .fix-about{
   padding-bottom: 10px;
   padding-left: 0px;
+}
+
+.checked{
+  display: none;
 }

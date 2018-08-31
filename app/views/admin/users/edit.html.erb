@@ -1,0 +1,44 @@
+<% provide(:title, (t ".title") ) %>
+<h1><%= t".title" %></h1>
+<div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <%= form_for [:admin, @user] do |f| %>
+      <%= render "admin/users/error_message" %>
+
+      <%= f.label :name, t(".name")  %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :email, t(".email") %>
+      <%= f.email_field :email, disabled: true, class: "form-control" %>
+
+      <%= f.label :phone, t(".phone") %>
+      <%= f.phone_field :phone, disabled: true, class: "form-control" %>
+
+      <div class="checkbox if_check">
+        <label><input type="checkbox" value="">
+          <%= t ".change_password" %>
+        </label>
+      </div>
+
+      <div class="checked">
+        <%= f.label :password, t(".password") %>
+        <%= f.password_field :password, class: "form-control" %>
+
+        <%= f.label :password_confirmation, t(".confirm") %>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+      </div>
+
+      <%= f.label :role, t(".role") %>
+      <div class="radio">
+        <%= f.radio_button :role,"admin", checked: (@user.role == true) %>
+        <label><%= t ".admin" %></label>
+      </div>
+      <div class="radio">
+        <%= f.radio_button :role,"user", checked: (@user.role == false) %>
+        <label><%= t ".user" %></label>
+      </div>
+
+      <%= f.submit (t ".button"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

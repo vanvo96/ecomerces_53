@@ -14,10 +14,10 @@
               </li>
               <ul class="sub-menu collapse" id="user">
                 <li class="active"><i class="fas fa-angle-right"></i>
-                  <a href="#">  <%= t ".listuser" %></a>
+                  <%=link_to (t ".listuser"), admin_users_path %>
                 </li>
                 <li><i class="fas fa-angle-right"></i>
-                  <a href="#"> <%= t ".adduser" %></a>
+                  <%=link_to (t ".adduser"), new_admin_user_path %>
                 </li>
               </ul>
               <li data-toggle="collapse" data-target="#categories" class="collapsed">
