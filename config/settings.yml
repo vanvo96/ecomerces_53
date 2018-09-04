@@ -1,0 +1,6 @@
+common:
+  user:
+    form_signup:
+      size: "25"
+    form_login:
+      size: "30"

@@ -1,0 +1,184 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+body{
+  background-color: #f1f1f1;
+  margin-top: 68px;
+}
+li, a:hover{
+  list-style: none;
+  text-decoration: none;
+}
+/*menu*/
+.top{
+  margin-top: -9px;
+}
+.yellow{
+  background: #fe7700;
+  height: 60px;
+}
+.logo li a{
+  color: white!important;
+}
+.navbar-brand img{
+  height: 57px;
+  margin-top: -6px;
+  width: 174px;
+}
+.small-icon{
+  font-size: 28px;
+}
+.txt-small{
+  font-size: 10px;
+  font-weight: bold;
+}
+.search{
+  margin-top: 10px;
+  position: relative;
+}
+.btn-search{
+  position: absolute;
+  background: none;
+  border: none;
+  top: 22px;
+    right: 17px;
+}
+.hangkhac{
+    width: 260px;
+    position: absolute;
+    left: -64px;
+    top: 68px;
+    height: 246px;
+    font-size: 17px;
+    padding-left: 15px;
+    background-color:  #fe7700bf;
+}
+.hangkhac .marginn{
+  margin-left: -30px;
+}
+.hangkhac ul{
+  padding-left: 14px;
+  padding-top: 8px;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background-color: #d3d0d1cc;
+}
+.hangkhac ul li{
+  margin-bottom: 13px;
+}
+.option_menucon {
+  background-color: #fe7700bf;
+}
+.option_menucon li a{
+  font-weight: bold;
+}
+
+/* footer */
+.backgroundblack{
+  background: black;
+  color:white;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.backgroundblack a{
+  color:white;
+}
+
+/*Modal Box*/
+.dklogin{
+  display: none;
+}
+/*Dang Ky Dang Nhap*/
+.modalbox{
+  border-radius: 6px;
+  padding-top: 0px;
+  margin: 0px auto;
+  height: 481px;
+  width: 563px;
+  background-color: #000000;
+  background-position: center;
+  position: fixed;
+  z-index: 2;
+  top: 102px;
+  left: 400px;
+  opacity: 0.9;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.modalbox a{
+  font-weight: bold;
+  padding: 18px;
+  font-size: 27px;
+  background: #7ed0dcb3;
+  color: inherit;
+  text-decoration: none;
+}
+.modalbox button{
+  padding: 9px 18px 9px 18px;
+  border-radius: 5px;
+  border: none;
+  font-size: 19px;
+}
+.signup{
+  margin-top: 45px;
+  display: none;
+}
+
+.signup td{
+  padding-left: 20px;
+}
+.modalbox td{
+  padding: 10px 4px 0px 0px;
+  font-weight: bold;
+}
+.modalbox input{
+  border-radius: 7px;
+  padding: 9px;
+  border: none;
+  background-color: #7ed0dc;
+}
+.modalbox span{
+  color: #09defded;
+  border-radius: 7px;
+  padding: 7px;
+  font-size: 17px;
+}
+/*Div Dang Nhap*/
+.loginn{
+  margin-top: 50px;
+}
+.loginn td{
+  padding-left: 28px;
+}
+.loginn i{
+  font-size: 20px;
+}
+.x{
+  color: red!important;
+  padding: 3px 10px 4px 10px!important;
+  font-size: 21px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background: #4dd2eb!important;
+}
+
+.dk{
+  text-decoration: underline!important;
+  background: none!important;
+  font-size: 21px!important;
+  padding: 4px!important;
+  color: #227400!important;
+}
+
+.background-on{
+  background: #29d4009c;
+  color: white;
+}
+.background-off{
+  background: #7ed0dcb3;
+  color: white;
+}

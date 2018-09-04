@@ -1,0 +1,102 @@
+<!-- top-menu -->
+  <nav class="navbar navbar-default navbar-fixed-top yellow" role="navigation" >
+    <div class="container top">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">app/assets/stylesheets/application.css</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <span><%= image_tag "logo/logo1.png", alt: "logo" %></span>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse logo">
+        <ul class="nav navbar-nav text-center">
+          <li>
+            <a href="#">
+              <i class="fab fa-apple small-icon"></i><br>
+              <span class="txt-small"><%= t ".iphone" %></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-android small-icon"></i><br>
+              <span class="txt-small"><%= t ".samsung" %></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-microsoft small-icon"></i><br>
+              <span class="txt-small"><%= t ".nokia" %></span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fas fa-mobile small-icon"></i><br>
+              <span class="txt-small"><%= t ".other" %></span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu hangkhac">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <ul>
+                    <li><a href="#"><%= t ".oppo" %></a></li>
+                    <li><a href="#"><%= t ".sony" %></a></li>
+                    <li><a href="#"><%= t ".vivo" %></a></li>
+                    <li><a href="#"><%= t ".huawai" %></a></li>
+                    <li><a href="#"><%= t ".xiaomi" %></a></li>
+                    <li><a href="#"><%= t ".mobistar" %></a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 marginn">
+                  <ul>
+                    <li><a href="#"><%= t ".motorola" %></a></li>
+                    <li><a href="#"><%= t ".asus" %></a></li>
+                    <li><a href="#"><%= t ".htc" %></a></li>
+                    <li><a href="#"><%= t ".mobell" %></a></li>
+                    <li><a href="#"><%= t ".philipsr" %></a></li>
+                    <li><a href="#"><%= t ".bkav" %></a></li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-headphones small-icon "></i><br>
+              <span class="txt-small"><%= t ".accessories" %></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-gift small-icon "></i><br>
+              <span class="txt-small"><%= t ".promotion" %></span>
+            </a>
+          </li>
+          <li>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group search">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default fa fa-search btn-search"></button>
+            </form>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right text-center">
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal" class="boxmodal">
+              <i class="fas fa-user small-icon"></i><br>
+              <span class="txt-small"><%= t ".signuplogin" %></span>
+            </a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <!-- end top-menu -->
