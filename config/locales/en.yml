@@ -1,3 +1,54 @@
 en:
   hello: "Hello world"
   base_title: "Rmobile"
+  static_page:
+    home:
+      hello: "Hello World"
+      project: "Project 1 Ecomercesp"
+
+  common:
+    user:
+      form_login_signup:
+        registration: "Sign up"
+        login: "Login"
+        notyetaccount: "You have an account? Please click"
+        account: "Username:"
+        pass: "Passworld:"
+        passconfirm: "Passworld confirm:"
+        phone: "Number phone:"
+        gender: "Gender:"
+        email: "Email:"
+        female: "Female"
+        male: "Male"
+
+      header:
+        other: "OTHER"
+        accessories: "ACCESSORIES"
+        promotion: "PROMOTION"
+        signuplogin: "Sign up/Log in"
+        iphone: "IPHONE"
+        samsung: "SAMSUNG"
+        nokia: "NOKIA"
+        oppo: "OPPO"
+        sony: "Sony"
+        vivo: "Vivo"
+        huawai: "Huawai"
+        xiaomi: "Xiaomi"
+        mobistar: "Mobistar"
+        motorola: "Motorola"
+        asus: "Asus(Zenfone)"
+        htc: "HTC"
+        mobell: "Mobell"
+        philips: "Philips"
+        bkav: "BKAV"
+
+      footer:
+        infomation: "RMOBILE"
+        informobile: " Information Rmobile"
+        phoneR: "Phone 0983.xxx.xxx"
+        support: "SUPPORT"
+        transport: "Transport"
+        contact: "CONTACT"
+        face: "Facebook"
+        youtube: "Youtube"
+        iso: "© 2018 TRAINNIG RUBY ON RAILS PROJECT 1"
