@@ -1,0 +1,58 @@
+<!-- body admin -->
+<div class="container-fluild">
+  <div class="row">
+    <!-- vertical menu left body-->
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="nav-side-menu">
+        <div class="brand"><%= t ".admin" %></div>
+          <div class="menu-list">
+            <ul id="menu-content">
+              <li  data-toggle="collapse" data-target="#user" class="collapsed active">
+                <a href="#">
+                  <i class="fa fa-users fa-lg"></i> <%= t ".user" %><span class="caret"></span>
+                </a>
+              </li>
+              <ul class="sub-menu collapse" id="user">
+                <li class="active"><i class="fas fa-angle-right"></i>
+                  <a href="#">  <%= t ".listuser" %></a>
+                </li>
+                <li><i class="fas fa-angle-right"></i>
+                  <a href="#"> <%= t ".adduser" %></a>
+                </li>
+              </ul>
+              <li data-toggle="collapse" data-target="#categories" class="collapsed">
+                <a href="#">
+                  <i class="fas fa-bars"></i> <%= t ".cate" %><span class="caret"></span>
+                </a>
+              </li>
+              <ul class="sub-menu collapse" id="categories">
+                <li><i class="fas fa-angle-right"></i><%=link_to (t ".listcate"), admin_categories_path %></li>
+                <li><i class="fas fa-angle-right"></i><%=link_to (t ".addcate"), new_admin_category_path %></li>
+              </ul>
+              <li data-toggle="collapse" data-target="#product" class="collapsed">
+                <a href="#">
+                  <i class="fas fa-mobile"></i> <%= t ".product" %><span class="caret"></span>
+                </a>
+              </li>
+              <ul class="sub-menu collapse" id="product">
+                <li><i class="fas fa-angle-right"></i> <%= t ".listproduct" %></li>
+                <li><i class="fas fa-angle-right"></i> <%= t ".addproduct" %></li>
+              </ul>
+              <li data-toggle="collapse" data-target="#order" class="collapsed">
+                <a href="#">
+                  <i class="fas fa-cart-plus"></i><%= t ".order" %><span class="arrow"></span>
+                </a>
+              </li>
+              <ul class="sub-menu collapse" id="order">
+                <li><i class="fas fa-angle-right"></i> <%= t ".listorder" %></li>
+              </ul>
+            </ul>
+        </div>
+      </div>
+    </div> <!--end vertical menu left body-->
+    <!-- right body -->
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+      <%= yield %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<tr>
+  <th scope="row"><%= category.name %></th>
+  <td><%= link_to (t ".edit"), edit_admin_category_path(category) %></td>
+  <td>
+    <%= link_to (t ".del"), [:admin, category], method: :DELETE,
+      data: { confirm: (t ".del") } %>
+  </td>
+</tr>
