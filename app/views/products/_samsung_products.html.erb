@@ -19,7 +19,9 @@
             <a class="name-products"><%= samsung.name %></a>
             <p class="price"><strong><%= samsung.price %>$</strong></p>
             <p>
-              <a href="#" class="pull-right cart-fas" ><i class="fas fa-shopping-cart"></i></a>
+              <%= link_to carts_path(product_id: samsung.id), method: :POST, class: "pull-right cart-fas" do %>
+                <i class="fas fa-shopping-cart"></i>
+              <% end %>
             </p>
           </div>
         </div>

@@ -5,10 +5,16 @@ en:
   samsung: "SAMSUNG"
   other_product: "OTHER PRODUCTS"
   sale_members: "Promotion For Members"
+
+  checkout: "CHECKOUT"
+  delete: "Delete"
+
+
   change_password: "Change Password"
   admin: "Admin"
   user: "User"
   role: "Role"
+
 
   users:
     welcome: "Welcome !!!"
@@ -126,7 +132,6 @@ en:
         edit: "Edit"
         del: "Delete"
 
-
   products:
     top_trend:
         top: "Top 12 Products"
@@ -144,27 +149,55 @@ en:
         edit: "Edit"
         del: "Delete"
 
+  carts:
+    show_cart:
+      shop: "Shopping Cart"
+      product: "Product"
+      quantity: "Quantity"
+      price: "Price"
+      total_price: "Total price"
+      edit: "Edit quantity"
+
+  orders:
+    show:
+      order_id: "Order id:"
+      product_id: "Product id:"
+      quantity: "Quantity:"
+      total_price: "Total price"
+      total_order: "Total Orders:"
+
   controllers:
     admin:
-     category:
+      category:
         create:
-            success: "New category created!"
+          success: "New category created!"
         update:
-            success: "Category was successfully updated."
-            danger: "Category Update error."
+          success: "Category was successfully updated."
+          danger: "Category Update error."
         destroy:
-            success: "User was successfully destroyed."
-            danger: "Category Delete error."
+          success: "User was successfully destroyed."
+          danger: "Category Delete error."
         load:
-            danger: "Category Not Found."
-     user:
+          danger: "Category Not Found."
+
+    order_detail:
+      create:
+        success: "Order Added"
+        danger: "Please login"
+
+    order:
+      show:
+        danger: "Please Login"
+
+
+      user:
         create:
-            success: "New user created!"
+          success: "New user created!"
         update:
-            success: "User was successfully updated."
-            danger: "User Update error."
+          success: "User was successfully updated."
+          danger: "User Update error."
         destroy:
-            success: "User was successfully destroyed."
-            danger: "User Delete error."
+          success: "User was successfully destroyed."
+          danger: "User Delete error."
         load:
-            danger: "User Not Found."
+          danger: "User Not Found."

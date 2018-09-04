@@ -89,12 +89,38 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right text-center">
+        <% if session[:cart].present? %>
+          <li>
+
+            <%= link_to show_carts_path do %>
+              <i class="fas fa-shopping-cart small-icon"></i><br>
+              <span class="txt-small">
+                <%= quantity_in_carts  %>
+              </span>
+            <% end %>
+          </li>
+        <% end %>
         <li>
           <a href="#" data-toggle="modal" data-target="#myModal" class="boxmodal">
             <i class="fas fa-user small-icon"></i><br>
-            <span class="txt-small"><%= t ".signuplogin" %></span>
+            <span class="txt-small">
+              <% if logged_in? %>
+                <%= @current_user.name %>
+              <% else %>
+                <%= t ".signuplogin" %>
+              <% end %>
+              </span>
           </a>
         </li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle fix-dropdown" data-toggle="dropdown"><b class="caret"></b></a>
+            <ul class="dropdown-menu setup">
+              <li><%= link_to "Log Out", logout_path, method: :DELETE %></li>
+              <li><%= link_to "History Order", orders_show_path %></li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>

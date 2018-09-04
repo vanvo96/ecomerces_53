@@ -1,0 +1,23 @@
+<div class="container margin-slide">
+  <h2></h2>
+  <table class="table table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        <% @orders.each do |order| %>
+          <tr>
+            <td><%= (t ".order_id") %> <%= order.id %></td>
+            <% order.order_details.each do |order_detail| %>
+              <tr>
+                <td><%= (t ".product_id") %> <%= order_detail.product_id %></td>
+                <td><%= (t ".quantity") %> <%= order_detail.quantity %></td>
+                <td><%= (t ".total_price") %> <%=  order_detail.total_price %></td>
+              </tr>
+            <% end %>
+            <td colspan="2"></td>
+             <td><%= (t ".total_order") %> <%= order.total %></td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

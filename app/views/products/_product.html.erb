@@ -5,9 +5,10 @@
         <a class="name-products"><%= product.name %></a>
       <p class="price"><strong><%= product.price %>$</strong></p>
       <p>
-        <a href="#" class="pull-right cart-fas" ><i class="fas fa-shopping-cart"></i></a>
+        <%= link_to carts_path(product_id: product.id), method: :POST, class: "pull-right cart-fas" do %>
+          <i class="fas fa-shopping-cart"></i>
+        <% end %>
       </p>
     </div>
   </div>
 </div>
-

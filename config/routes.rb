@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "orders/show"
   root "products#index"
   namespace :admin do
     root to: "categories#index"
@@ -11,4 +12,11 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users
+  resources :carts, :except => [:destroy]
+  get "/show_carts", to: "carts#show_cart"
+  delete "/destroy_cart", to: "carts#destroy_cart"
+  delete "/delete_cart", to: "carts#delete_cart"
+  put "/update_cart", to: "carts#update_cart"
+
+  resources :order_details
 end
