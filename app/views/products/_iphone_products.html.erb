@@ -1,0 +1,30 @@
+<!-- Iphone -->
+<div class="container background">
+  <legend><%= t "iphone"%></legend>
+  <div class="row">
+    <div class="col-sm-4 custom margin-thumnail border-thumbnail fix">
+      <div class="thumbnail">
+        <%= image_tag "iphone-banner.jpg", alt: "anh 1" %>
+        <div class="caption">
+          <a class="name-products">Ten product</strong></p>
+          <p class="price"><strong>10.000.000$</strong></p>
+          </div>
+      </div>
+    </div>
+    <% iphone_products.limit(8).each do |iphone|%>
+      <div class="col-md-5th-1 col-sm-4 margin-thumnail border-thumbnail fix">
+        <div class="thumbnail">
+          <%= image_tag iphone.url, alt: iphone.name %>
+          <div class="caption">
+            <a class="name-products"><%= iphone.name %></a>
+            <p class="price"><strong><%= iphone.price %>$</strong></p>
+            <p>
+              <a href="#" class="pull-right cart-fas" ><i class="fas fa-shopping-cart"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- end iphone -->

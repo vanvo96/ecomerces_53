@@ -1,3 +1,14 @@
 <% provide(:title, "" ) %>
 <%= render "common/user/slide" %>
 <%= render "top_trends" %>
+<%= render "iphone_products" %>
+<%= render "samsung_products" %>
+<!-- Cac SP Khac-->
+<div class="container background">
+  <legend><%= t "other_product"%></legend>
+  <div class="row">
+    <%= render @products %>
+  </div>
+</div>
+<!-- end Cac SP Khac-->
+<%= render "sale" %>

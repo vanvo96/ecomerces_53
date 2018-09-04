@@ -5,7 +5,7 @@ class Admin::CategoriesController < ApplicationController
 
   def index
     @categories = Category.ordered_by_name.paginate page: params[:page],
-      per_page: Settings.controller.admin.category.per_page
+      per_page: Settings.controller.admin.categories.per_page
   end
 
   def show; end

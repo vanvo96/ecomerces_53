@@ -8,8 +8,8 @@
           <div class="item active">
             <div class="row">
               <% top_trends.limit(6).each do |top_trend| %>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                  <a class="thumbnail">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 margin-thumnail">
+                  <a class="thumbnail top-img border-none">
                     <%= image_tag top_trend.url, alt: "" %>
                   </a>
                 </div>
@@ -20,8 +20,8 @@
           <div class="item">
             <div class="row">
               <% top_trends.limit(6).offset(6).each do |top_trend| %>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                  <a class="thumbnail">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 margin-thumnail">
+                  <a class="thumbnail top-img border-none">
                     <%= image_tag top_trend.url, alt: "" %>
                   </a>
                 </div>
