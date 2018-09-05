@@ -1,0 +1,80 @@
+<!-- tao Modal Box Dang ky Dang Nhap -->
+<div class="container background">
+  <div class="modalbox dklogin">
+    <button class="clickdk"><%= t ".registration" %></button>
+    <button class="clickdn"><%= t ".login" %></button>
+    <button class="x">X</button>
+    <!-- div Dang Ky -->
+    <div class="signup">
+      <form action="" method="POST">
+        <table align="center">
+          <tr>
+            <td><span><%= t ".account" %></span></td>
+            <td>
+              <input required="" type="text" name="txtname" size="<%= Settings.common.user.form_signup.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td><span><%= t ".pass" %></span></td>
+            <td>
+              <input required="" type="password" name="txtpass" size="<%= Settings.common.user.form_signup.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td><span><%= t ".passconfirm" %></span></td>
+            <td>
+              <input required="" type="password" name="repass" size="<%= Settings.common.user.form_signup.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td><span><%= t ".phone" %></span></td>
+            <td>
+              <input required="" type="number" name="sodt ". size="<%= Settings.common.user.form_signup.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td><span><%= t ".email" %></span></td>
+            <td>
+              <input required="" type="email" name="txtemail" size="<%= Settings.common.user.form_signup.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-center">
+              <button><%= t ".registration" %></button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+      <!-- end div Dang Ky -->
+    <div class="loginn">
+      <form action="" method="POST">
+        <table align="center">
+          <tr>
+            <td><span><i class="fas fa-user"></i></span></td>
+            <td>
+              <input required="" type="text" placeholder="" name="txtname" size="<%= Settings.common.user.form_login.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td><span><i class="fas fa-lock-open"></i></span></td>
+            <td>
+              <input required="" type="password" placeholder="" name="txtpass" size="<%= Settings.common.user.form_login.size %>">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-center">
+              <button class="btn btn-success"><%= t ".login" %></button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-center">
+              <span><%= t ".notyetaccount" %></span>
+              <button class="dk" href="#"><%= t ".registration" %></button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>  <!-- end Modal Box -->
