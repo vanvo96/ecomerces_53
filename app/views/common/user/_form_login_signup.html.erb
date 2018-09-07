@@ -6,87 +6,41 @@
       <a href="#" class="x">X</a>
       <!-- div Dang Ky -->
       <div class="signup">
-        <form action="" method="POST">
-            <table align="center">
-              <tr>
-                <td><span><%= t ".account" %></span></td>
-                <td>
-                  <input required="" type="text" name="txtname" size="25">
-                </td>
-              </tr>
-              <tr>
-                <td><span><%= t ".pass" %></span></td>
-                <td>
-                  <input required="" type="password" name="txtpass" size="25">
-                </td>
-              </tr>
-              <tr>
-                <td><span><%= t ".passconfirm" %></span></td>
-                <td>
-                  <input required="" type="password" name="repass" size="25">
-                </td>
-              </tr>
-              <tr>
-                <td><span><%= t ".phone" %></span></td>
-                <td>
-                  <input required="" type="number" name="sodt ". size="25">
-                </td>
-              </tr>
-              <tr>
-                <td><span><%= t ".gender" %></span></td>
-                <td>
-                  <input type="radio" name="gender" value="M" checked="">
-                  <span><%= t ".male"%></span>
-                  <input type="radio" name="gender" value="F">
-                  <span><%= t ".female"%></span>
-                </td>
-              </tr>
-              <tr>
-                <td><span><%= t ".email" %></span></td>
-                <td>
-                  <input required="" type="email" name="txtemail" size="25">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" class="text-center">
-                  <button><%= t ".registration" %></button>
-                </td>
-              </tr>
-            </table>
-        </form>
+        <%= form_for :user, url: users_path, method: :POST do |f| %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control" %>
+
+          <%= f.label :phone %>
+          <%= f.phone_field :phone, class: "form-control" %>
+
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control" %>
+
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+
+          <%= f.submit "add user", class: "btn btn-primary" %>
+        <% end %>
 
 
       </div>
       <!-- end div Dang Ky -->
 
       <div class="loginn">
-        <form action="" method="POST">
-          <table align="center">
-            <tr>
-              <td><span><i class="fas fa-user"></i></span></td>
-              <td>
-                <input required="" type="text" placeholder="" name="txtname" size="30">
-              </td>
-            </tr>
-            <tr>
-              <td><span><i class="fas fa-lock-open"></i></span></td>
-              <td>
-                <input required="" type="password" placeholder="" name="txtpass" size="30">
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="text-center">
-                <button class="btn btn-success"><%= t ".login" %></button>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="text-center">
-                <span><%= t ".notyetaccount"%></span>
-                <a class="dk" href="#"><%= t ".registration" %></a>
+        <%= form_for :session, url: sessions_path, method: :POST do |f| %>
 
-              </td>
-          </table>
-        </form>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control" %>
+
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control" %>
+
+          <%= f.submit t("users.log_in"), class: "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
   </div>
