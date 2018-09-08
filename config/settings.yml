@@ -4,3 +4,8 @@ common:
       size: "25"
     form_login:
       size: "30"
+controller:
+  admin:
+    category:
+      per_page: 10
+

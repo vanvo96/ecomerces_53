@@ -6,6 +6,8 @@ en:
       hello: "Hello World"
       project: "Project 1 Ecomercesp"
 
+  error: "error"
+
   common:
     user:
       form_login_signup:
@@ -52,3 +54,47 @@ en:
         face: "Facebook"
         youtube: "Youtube"
         iso: "© 2018 TRAINNIG RUBY ON RAILS PROJECT 1"
+
+    admin:
+      body_admin:
+        admin: "Admin Page"
+        user: "User"
+        listuser: "List User"
+        adduser: "Add User"
+        cate: "Categories"
+        listcate: "List Categories"
+        addcate: "Add Categories"
+        product: "Product"
+        listproduct: "List Product"
+        addproduct: "Add Product"
+        order: "Order"
+        listorder: "List Order"
+
+  admin:
+    categories:
+      edit:
+        title: "Update Category"
+        button: "Update"
+      new:
+        title: "New Category"
+        button: "New"
+      index:
+        title: "List Category"
+        delete: "Are You Sure?"
+      category:
+        edit: "Edit"
+        del: "Delete"
+
+  controllers:
+    admin:
+     category:
+        create:
+            success: "New category created!"
+        update:
+            success: "Category was successfully updated."
+            danger: "Category Update error."
+        destroy:
+            success: "User was successfully destroyed."
+            danger: "Category Delete error."
+        load:
+            danger: "Category Not Found."
