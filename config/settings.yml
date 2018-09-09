@@ -8,4 +8,14 @@ controller:
   admin:
     category:
       per_page: 10
-
+user:
+  size: 80
+  name:
+    length:
+      maximum: 50
+  email:
+    length:
+      maximum: 255
+  password:
+    length:
+      minimum: 6
