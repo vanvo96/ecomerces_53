@@ -1,0 +1,40 @@
+<!-- top 10product -->
+<div class="container background background-white">
+  <legend><%= t "products.top_trend.top" %></legend>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div id="carousel-id" class="carousel slide" data-ride="carousel" data-interval="1500">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="row">
+              <% top_trends.limit(6).each do |top_trend| %>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <a class="thumbnail">
+                    <%= image_tag top_trend.url, alt: "" %>
+                  </a>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <% top_trends.limit(6).offset(6).each do |top_trend| %>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <a class="thumbnail">
+                    <%= image_tag top_trend.url, alt: "" %>
+                  </a>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="display: none;"></span></a>
+        <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="display: none;"></span></a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end top product -->

@@ -104,6 +104,10 @@ en:
         edit: "Edit"
         del: "Delete"
 
+  products:
+    top_trend:
+        top: "Top 12 Products"
+
   controllers:
     admin:
      category:
@@ -117,3 +121,5 @@ en:
             danger: "Category Delete error."
         load:
             danger: "Category Not Found."
+
+

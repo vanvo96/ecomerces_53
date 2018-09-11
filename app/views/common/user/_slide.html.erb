@@ -1,0 +1,79 @@
+<div class="container margin-slide">
+    <div class="row">
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <div id="carousel-id" class="carousel slide" data-ride="carousel" data-interval="1000">
+          <ol class="carousel-indicators" style="z-index: 1">
+            <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="3" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="4" class=""></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag "slide/slide_1.png", alt: "slide_1" %>
+            </div>
+            <div class="item">
+              <%= image_tag "slide/slide_2.png", alt: "slide_2" %>
+            </div>
+            <div class="item">
+              <%= image_tag "slide/slide_3.png", alt: "slide_3" %>
+            </div>
+            <div class="item">
+              <%= image_tag "slide/slide_4.png", alt: "slide_4" %>
+            </div>
+            <div class="item">
+              <%= image_tag "slide/slide_5.png", alt: "slide_5" %>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="congnghe">
+          <fieldset>
+            <legend><span>Tech News</span></legend>
+            <div class="congnghe-content">
+              <a href="">
+                <span class="row">
+                  <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <span>Smart phone 5G đầu tiên có mặt tại việt Nam</span>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <%= image_tag "slide/small.jpg", alt: "article-1" %>
+                  </div>
+                </span>
+              </a>
+            </div>
+            <div class="congnghe-content">
+              <a href="">
+                <span class="row">
+                  <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <span>Smart phone 5G đầu tiên có mặt tại việt Nam</span>
+                  </div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <%= image_tag "slide/small.jpg", alt: "article-2" %>
+                  </div>
+                </span>
+              </a>
+            </div>
+          </fieldset>
+        </div>
+        <video width="360" style="margin-top: 17px;height: 207px;" controls>
+            <source src="lib/videos/top5.mp4" type="video/mp4">
+          <source src="lib/videos/top5.mp4" type="video/ogg">
+        </video>
+      </div>
+    </div>
+  </div>
+  <!-- end slide -->
+
+  <!-- banner -->
+  <div class="container background banner-img-fix">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <%= image_tag "banner.png", alt: "banner" %>
+      </div>
+    </div>
+  </div>

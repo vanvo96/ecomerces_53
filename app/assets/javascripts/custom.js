@@ -9,14 +9,18 @@ $(document).ready(function(){
     $('.loginn').hide();
     $('.signup').show();
     $('.clickdn').addClass('background-off');
+    $('.clickdn').removeClass('background-on');
     $('.clickdk').addClass('background-on');
+    $('.clickdk').removeClass('background-off');
   });
 
   $('.clickdn').click(function(){
     $('.signup').hide();
     $('.loginn').show();
     $('.clickdn').addClass('background-on');
+    $('.clickdn').removeClass('background-off');
     $('.clickdk').addClass('background-off');
+    $('.clickdk').removeClass('background-on');
   });
 
   $('.x').click(function(){
@@ -27,7 +31,9 @@ $(document).ready(function(){
     $('.loginn').hide();
     $('.signup').show();
     $('.clickdk').addClass('background-on');
+    $('.clickdk').removeClass('background-off');
     $('.clickdn').addClass('background-off');
+    $('.clickdn').removeClass('background-on');
   });
 
 });

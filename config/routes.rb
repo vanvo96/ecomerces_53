@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
+  root "products#index"
   namespace :admin do
     root to: "categories#index"
     resources :categories
