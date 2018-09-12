@@ -1,6 +1,11 @@
 en:
   hello: "Hello world"
   base_title: "Rmobile"
+  iphone: "IPHONE"
+  samsung: "SAMSUNG"
+  other_product: "OTHER PRODUCTS"
+  sale_members: "Promotion For Members"
+
   users:
     welcome: "Welcome !!!"
     profile: "Profile"

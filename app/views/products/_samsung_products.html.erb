@@ -1,0 +1,30 @@
+<!-- SamSung-->
+<div class="container background">
+  <legend><%= t "samsung"%></legend>
+  <div class="row">
+    <div class="col-sm-4 custom margin-thumnail border-thumbnail fix">
+      <div class="thumbnail">
+        <%= image_tag "samsung-banner.jpg", alt: "anh 1" %>
+        <div class="caption">
+          <a class="name-products">Ten product</strong></p>
+          <p class="price"><strong>10.000.000$</strong></p>
+          </div>
+      </div>
+    </div>
+    <% samsung_products.limit(8).each do |samsung|%>
+      <div class="col-md-5th-1 col-sm-4 margin-thumnail border-thumbnail fix">
+        <div class="thumbnail">
+          <%= image_tag samsung.url, alt: samsung.name %>
+          <div class="caption">
+            <a class="name-products"><%= samsung.name %></a>
+            <p class="price"><strong><%= samsung.price %>$</strong></p>
+            <p>
+              <a href="#" class="pull-right cart-fas" ><i class="fas fa-shopping-cart"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- end samsung -->

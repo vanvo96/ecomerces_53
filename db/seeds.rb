@@ -1,6 +1,12 @@
-13.times do |n|
-  Category.create!(name: "iphone - #{n}")
-end
+Category.create!(name: "IPHONE")
+Category.create!(name: "SAMSUNG")
+Category.create!(name: "NOKIA")
+Category.create!(name: "OPPO")
+Category.create!(name: "XIAOMI")
+Category.create!(name: "MIBISTAR")
+Category.create!(name: "SONY")
+Category.create!(name: "HUAWAI")
+Category.create!(name: "HTC")
 
 categories = Category.order(:created_at)
 
@@ -33,5 +39,3 @@ end
 
 products = Product.all
 products.each { |product| product.images.create!(url: "abc.jpg") }
-
-

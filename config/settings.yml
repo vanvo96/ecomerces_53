@@ -6,8 +6,10 @@ common:
       size: "30"
 controller:
   admin:
-    category:
+    categories:
       per_page: 10
+  products:
+    per_page: 10
 user:
   size: 80
   name:
