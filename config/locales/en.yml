@@ -5,6 +5,10 @@ en:
   samsung: "SAMSUNG"
   other_product: "OTHER PRODUCTS"
   sale_members: "Promotion For Members"
+  change_password: "Change Password"
+  admin: "Admin"
+  user: "User"
+  role: "Role"
 
   users:
     welcome: "Welcome !!!"
@@ -108,10 +112,37 @@ en:
       category:
         edit: "Edit"
         del: "Delete"
+    users:
+      edit:
+        title: "Update User"
+        button: "Update"
+      new:
+        title: "New User"
+        button: "New"
+      index:
+        title: "List User"
+        delete: "Are You Sure?"
+      user:
+        edit: "Edit"
+        del: "Delete"
+
 
   products:
     top_trend:
         top: "Top 12 Products"
+    users:
+      edit:
+        title: "Update User"
+        button: "Update"
+      new:
+        title: "New User"
+        button: "New"
+      index:
+        title: "List User"
+        delete: "Are You Sure?"
+      user:
+        edit: "Edit"
+        del: "Delete"
 
   controllers:
     admin:
@@ -126,5 +157,14 @@ en:
             danger: "Category Delete error."
         load:
             danger: "Category Not Found."
-
-
+     user:
+        create:
+            success: "New user created!"
+        update:
+            success: "User was successfully updated."
+            danger: "User Update error."
+        destroy:
+            success: "User was successfully destroyed."
+            danger: "User Delete error."
+        load:
+            danger: "User Not Found."

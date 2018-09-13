@@ -1,0 +1,8 @@
+<tr>
+  <th scope="row"><%= user.name %></th>
+  <td><%= link_to (t ".edit"), edit_admin_user_path(user) %></td>
+  <td>
+    <%= link_to (t ".del"), [:admin, user], method: :DELETE,
+      data: { confirm: (t ".del") } %>
+  </td>
+</tr>

@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :suggests
   has_many :comments
   has_many :ratings
+  scope :ordered_by_name, ->order(name: :ASC)
 
   before_save{email.downcase!}
   validates :name, presence: true,
