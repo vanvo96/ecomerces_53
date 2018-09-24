@@ -5,37 +5,38 @@
     <button class="clickdn"><%= t ".login" %></button>
     <button class="x">X</button>
     <!-- div Dang Ky -->
+
     <div class="signup">
-      <form action="" method="POST">
+      <%= form_for :user, url: users_path, method: :POST do |f| %>
         <table align="center">
           <tr>
-            <td><span><%= t ".account" %></span></td>
+            <td><span><%= f.label :name %></span></td>
             <td>
-              <input required="" type="text" name="txtname" size="<%= Settings.common.user.form_signup.size %>">
+              <%= f.text_field :name, class: "form-control" %>
             </td>
           </tr>
           <tr>
-            <td><span><%= t ".pass" %></span></td>
+            <td><span><%= f.label :password %></span></td>
             <td>
-              <input required="" type="password" name="txtpass" size="<%= Settings.common.user.form_signup.size %>">
+              <%= f.password_field :password, class: "form-control" %>
             </td>
           </tr>
           <tr>
-            <td><span><%= t ".passconfirm" %></span></td>
+            <td><span><%= f.label :password_confirmation, "Confirmation" %></span></td>
             <td>
-              <input required="" type="password" name="repass" size="<%= Settings.common.user.form_signup.size %>">
+              <%= f.password_field :password_confirmation, class: "form-control" %>
             </td>
           </tr>
           <tr>
-            <td><span><%= t ".phone" %></span></td>
+            <td><span><%= f.label :phone %></span></td>
             <td>
-              <input required="" type="number" name="sodt ". size="<%= Settings.common.user.form_signup.size %>">
+              <%= f.number_field :phone, class: "form-control", size: 300 %>
             </td>
           </tr>
           <tr>
-            <td><span><%= t ".email" %></span></td>
+            <td><span><%= f.label :email %></span></td>
             <td>
-              <input required="" type="email" name="txtemail" size="<%= Settings.common.user.form_signup.size %>">
+              <%= f.email_field :email, class: "form-control" %>
             </td>
           </tr>
           <tr>
@@ -44,22 +45,22 @@
             </td>
           </tr>
         </table>
-      </form>
+      <% end %>
     </div>
       <!-- end div Dang Ky -->
     <div class="loginn">
-      <form action="" method="POST">
+      <%= form_for :session, url: login_path, method: :POST do |f| %>
         <table align="center">
           <tr>
             <td><span><i class="fas fa-user"></i></span></td>
             <td>
-              <input required="" type="text" placeholder="" name="txtname" size="<%= Settings.common.user.form_login.size %>">
+              <%= f.text_field :email, class: "form form-control" %>
             </td>
           </tr>
           <tr>
             <td><span><i class="fas fa-lock-open"></i></span></td>
             <td>
-              <input required="" type="password" placeholder="" name="txtpass" size="<%= Settings.common.user.form_login.size %>">
+              <%= f.password_field :password, class: "form form-control" %>
             </td>
           </tr>
           <tr>
@@ -74,7 +75,7 @@
             </td>
           </tr>
         </table>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>  <!-- end Modal Box -->

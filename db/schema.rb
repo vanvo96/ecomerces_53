@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_08_31_104941) do
 
   create_table "order_details", force: :cascade do |t|
     t.integer "quantity"
-    t.integer "sum_price"
+    t.decimal "total_price", precision: 8, scale: 2, default: "0.0"
     t.integer "order_id"
     t.integer "product_id"
     t.datetime "created_at", null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_08_31_104941) do
   create_table "orders", force: :cascade do |t|
     t.boolean "status"
     t.date "order_date"
+    t.decimal "total", precision: 8, scale: 2, default: "0.0"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

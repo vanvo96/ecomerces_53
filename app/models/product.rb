@@ -7,6 +7,7 @@ class Product < ApplicationRecord
 
   scope :order_by_newest, ->{order(created_at: :DESC).limit(15)}
   scope :joins_images, ->{joins(:images)}
+  scope :select_product_by_array_id, ->id_product{where(id: id_product)}
 
   scope :top_trends, (lambda do
     select(:id, :name, :price,

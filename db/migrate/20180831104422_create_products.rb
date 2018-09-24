@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :information
       t.string :title
-      t.integer :price
+      t.decimal :price
       t.integer :quantity
       t.references :category, foreign_key: true
 
