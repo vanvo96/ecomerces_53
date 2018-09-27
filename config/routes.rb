@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "orders/show"
+  resources :products
   root "products#index"
   namespace :admin do
     root to: "categories#index"
