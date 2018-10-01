@@ -22,9 +22,16 @@
                 <%= submit_tag (t ".edit"), class: "btn btn-success" %>
               <% end %>
             </td>
-            <td><%= item.price %></td>
-            <td><%= item.price * session[:cart][item.id.to_s]%></td>
-            <td><%= link_to (t "delete"), delete_cart_path(product_id: item.id), method: :DELETE%></td>
+            <% if (item.quantity - session[:cart][item.id.to_s]) > 5 && session[:cart][item.id.to_s] != 0%>
+              <td><%= item.price %></td>
+              <td><%= item.price * session[:cart][item.id.to_s] %></td>
+              <td><%= link_to (t "delete"), delete_cart_path(product_id: item.id), method: :DELETE%></td>
+            <% elsif session[:cart][item.id.to_s] == 0 %>
+              <td colspan="3"><h4 style="color: red"><%= t ".please_select_quantity" %> </h4></td>
+            <% else %>
+              <td colspan="3"><h4 style="color: red"><%= t ".out_of_stock" %> </h4></td>
+              <% session[:cart][item.id.to_s] = 0  %>
+            <% end %>
           </tr>
         <% end %>
         <tr>
@@ -36,12 +43,17 @@
           <td></td>
           <td></td>
           <td colspan="2">
-            <%= link_to (t "checkout"), order_details_path(total:total_price_order), method: :POST,
-            class: "btn btn-success" %>
+            <% if logged_in? %>
+              <%= link_to (t "checkout"), order_details_path(total:total_price_order), method: :POST, class: "btn btn-success btn-checkout"%>
+            <% else %>
+              <button class="btn btn-success btn-show-form"><%= t "checkout" %></button>
+            <% end %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+
+<%= render partial: "form_cart_checkout", locals: {total_price_order: total_price_order} %>
 

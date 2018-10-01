@@ -126,12 +126,13 @@ a:hover {
     color: white;
     width: 100%;
     margin-top: 15px;
+    position: relative;
+    bottom: -180px;
 }
 
 .backgroundblack a {
     color: white;
 }
-
 
 /*slide*/
 
@@ -1392,4 +1393,30 @@ body {
 
 .checked{
   display: none;
+}
+
+.form-checkout{
+    padding-top: 35px;
+    background-color: black;
+    position: fixed;
+    height: 425px;
+    width: 560px;
+    top: 100px;
+    left: 370px;
+    border-radius: 10px;
+    opacity: 0.9;
+    color: white;
+    display: none;
+}
+.form-checkout td{
+    padding: 10px;
+}
+.form-checkout input{
+    margin-right: 166px;
+}
+.form-checkout legend{
+    color: white;
+}
+.or-login{
+    background-color: none;
 }
