@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_31_104941) do
+ActiveRecord::Schema.define(version: 2018_10_03_134325) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -49,12 +49,16 @@ ActiveRecord::Schema.define(version: 2018_08_31_104941) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.boolean "status"
+    t.integer "status", default: 0, null: false
     t.date "order_date"
     t.decimal "total", precision: 8, scale: 2, default: "0.0"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "phone"
+    t.string "address"
+    t.string "email"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -62,7 +66,7 @@ ActiveRecord::Schema.define(version: 2018_08_31_104941) do
     t.string "name"
     t.string "information"
     t.string "title"
-    t.integer "price"
+    t.decimal "price"
     t.integer "quantity"
     t.integer "category_id"
     t.datetime "created_at", null: false
@@ -93,9 +97,14 @@ ActiveRecord::Schema.define(version: 2018_08_31_104941) do
     t.string "email"
     t.string "password_digest"
     t.string "phone"
-    t.boolean "role"
+    t.boolean "role", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

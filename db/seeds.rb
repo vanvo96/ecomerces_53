@@ -11,12 +11,15 @@ Category.create!(name: "HTC")
 categories = Category.order(:created_at)
 
 10.times do |n|
+  name = Faker::Name.name
 categories.each { |category| category.products.create!(
-  name: "Sam sung s9 #{n+1}",
+  name: name,
   price: 10000000,
   quantity: 50 )}
 end
 
+User.create!(name: "vanvo96", email: "vtvvan96@gmail.com", password: "123456",
+  password_confirmation: "123456", phone: "09112132131", role: true)
 30.times do |n|
   name = Faker::Name.name
   email = "abc#{n+1}example@gmail.com"
@@ -31,7 +34,7 @@ end
 
 users = User.order(name: :DESC).take(20)
 
-users.each { |user| user.orders.create!(order_date: Time.zone.now, status: false )}
+users.each { |user| user.orders.create!(order_date: Time.zone.now, status: 0 )}
 
 Order.all.each do |order|
   order.order_details.create! product_id: rand(Product.count) + 1, quantity: rand(20) + 1

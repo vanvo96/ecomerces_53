@@ -40,4 +40,20 @@ $(document).ready(function(){
     $('.checked').show();
   });
 
+  $(".btn-show-form").click(function(){
+    $(".form-checkout").show();
+  });
+
+  $(".form-checkout").mouseleave(function(){
+    $("body").dblclick(function(){
+      $(".form-checkout").hide();
+    })
+  });
+
+  $(".or-login").click(function(){
+    $(".form-checkout").hide();
+    $('.dklogin').show()
+    $('.clickdn').addClass('background-on');
+    $('.clickdk').addClass('background-off');
+  })
 });

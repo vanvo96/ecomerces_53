@@ -2,27 +2,42 @@ class OrderDetailsController < ApplicationController
   def create
     if session[:user_id].present?
       ActiveRecord::Base.transaction do
-        @order = Order.new(user_id: session[:user_id], order_date: Time.zone.now,
+        @order = Order.new(user_id: session[:user_id],
+         order_date: Time.zone.now,
          total: params[:total])
-        @order.save
-        session[:cart].each do |key, value|
-          @order_details = @order.order_details.create(product_id: key,
-           quantity: value)
-          product = Product.find_by id: key
-          total_price = @order_details.quantity * product.price
-          @order_details.update_attributes(total_price: total_price)
-        end
+        all_save_from_cart @order
+        redirect_to root_path
       end
-      destroy_session_cart
-      flash[:success] = t "controllers.order_detail.create.success"
-      redirect_to root_path
     else
-      flash[:danger] = t "controllers.order_detail.create.danger"
-      redirect_to root_path
+      ActiveRecord::Base.transaction do
+        @order = Order.new(user_id: Settings.user_id_default_for_guest, order_date: Time.zone.now,
+          total: params[:total], name: params[:order_detail][:name],
+          phone: params[:order_detail][:phone],
+          email: params[:order_detail][:email],
+          address: params[:order_detail][:address])
+        all_save_from_cart @order
+        redirect_to root_path
+      end
     end
   end
 
   def destroy_session_cart
     session.delete(:cart)
+  end
+
+  def add_order_details _order
+    session[:cart].each do |key, value|
+      product = Product.find_by id: key.to_i
+      total_price = value.to_i * product.price
+      @order_details = @order.order_details.create(product_id: key,
+        quantity: value, total_price: total_price)
+    end
+  end
+
+  def all_save_from_cart _order
+    @order.save
+    add_order_details @order
+    destroy_session_cart
+    flash[:success] = t "controllers.order_detail.create.success"
   end
 end

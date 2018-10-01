@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "orders/show"
   root "products#index"
   namespace :admin do
     root to: "categories#index"
     resources :categories
     resources :users
+    resources :orders
   end
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
