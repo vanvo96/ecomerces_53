@@ -24,3 +24,5 @@ user:
   password:
     length:
       minimum: 6
+
+user_id_default_for_guest: 1

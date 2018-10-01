@@ -1,0 +1,42 @@
+<div class="container form-checkout text-center">
+  <legend>CONFIRM INFORMATION</legend>
+  <%= form_for :order_detail, url: order_details_path(total:total_price_order), method: :POST do |f| %>
+    <table align="center">
+      <tr>
+        <td><span><%= f.label :name %></span></td>
+        <td>
+          <%= f.text_field :name, class: "form-control" %>
+        </td>
+      </tr>
+      <tr>
+        <td><span><%= f.label :phone %></span></td>
+        <td>
+          <%= f.number_field :phone, class: "form-control", size: 300 %>
+        </td>
+      </tr>
+      <tr>
+        <td><span><%= f.label :email %></span></td>
+        <td>
+          <%= f.email_field :email, class: "form-control", size: 300 %>
+        </td>
+      </tr>
+      <tr>
+        <td><span><%= f.label :address %></span></td>
+        <td>
+          <%= f.text_area :address, class: "form-control" %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-center">
+          <button class="btn btn-success"><%= t "checkout" %></button>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+      <tr>
+        <td colspan="2" class="text-center">
+          <span>Or login to confirm your order</span>
+          <button class="or-login btn btn-primary">Click</button>
+        </td>
+      </tr>
+</div>

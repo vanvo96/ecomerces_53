@@ -22,7 +22,6 @@ class CartsController < ApplicationController
   end
 
   def update_cart
-
     session[:cart][params[:product_id].to_s] = params[:quantity].to_i
     redirect_to show_carts_path
   end

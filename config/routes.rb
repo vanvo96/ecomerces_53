@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root to: "categories#index"
     resources :categories
     resources :users
+    resources :orders
   end
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"

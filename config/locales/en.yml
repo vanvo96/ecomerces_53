@@ -131,6 +131,10 @@ en:
       user:
         edit: "Edit"
         del: "Delete"
+    orders:
+      destroy:
+        success: "Delete Success"
+        danger: "Delete Errors"
 
   products:
     top_trend:
@@ -157,6 +161,8 @@ en:
       price: "Price"
       total_price: "Total price"
       edit: "Edit quantity"
+      out_of_stock: "Out of stock"
+      please_select_quantity: "Please select quantity"
 
   orders:
     show:
@@ -188,6 +194,9 @@ en:
     order:
       show:
         danger: "Please Login"
+      destroy:
+        success: "Delete Success"
+        danger: "Delete Errors"
 
 
       user:
@@ -201,3 +210,10 @@ en:
           danger: "User Delete error."
         load:
           danger: "User Not Found."
+  admin:
+    orders:
+      order:
+        user_name: "User name: "
+        guest:  "GUEST"
+        confirm_delete: "Are You Sure"
+

@@ -1,0 +1,27 @@
+<tr>
+  <td class="order_id"><%= (t ".order_id") %>: <%= order.id %></td>
+  <td><%= t ".user_name" %>
+      <%= order.user_id == 1 ? (t ".guest") : order.user.name %>
+  </td>
+  <td>
+    <%= link_to "Delete", [:admin, order], method: :DELETE, data: { confirm: (t ".confirm_delete") } %>
+    <%= select_tag "order[][name]",
+      options_for_select(order.statuses_selectbox, selected: order.status), id: "order-#{order.id}"
+    %>
+  </td>
+  <% order.order_details.each do |order_detail| %>
+    <tr>
+      <td><%= (t ".product_id") %>:
+        <%= order_detail.product.name %>
+      </td>
+      <td><%= (t ".quantity") %> <%= order_detail.quantity %></td>
+      <td><%= (t ".total_price") %> <%=  order_detail.total_price %></td>
+    </tr>
+  <% end %>
+  <td></td>
+  <td></td>
+  <td colspan="2"><%= (t ".total_order") %> <%= order.total %></td>
+</tr>
+<tr>
+  <td></td>
+</tr>
