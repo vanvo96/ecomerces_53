@@ -1,14 +1,28 @@
-<% provide(:title, "" ) %>
+<% if params[:q].present? %>
+  <% provide :title, t("list_result") %>
+<% else %>
+  <% provide :title, "" %>
+<% end %>
 <%= render "common/user/slide" %>
 <%= render "top_trends" %>
 <%= render "iphone_products" %>
 <%= render "samsung_products" %>
-<!-- Cac SP Khac-->
+
 <div class="container background">
-  <legend><%= t "other_product"%></legend>
+  <legend id="title_product"><%= t "other_product" %></legend>
   <div class="row">
-    <%= render @products %>
+    <% if @products.present? %>
+      <%= render @products %>
+    <% else %>
+      <h4><%= t "search_fail" %></h4>
+    <% end %>
   </div>
 </div>
-<!-- end Cac SP Khac-->
+
 <%= render "sale" %>
+
+<script type="text/javascript">
+  if (<%= params[:q].present? %>){
+    document.getElementById("title_product").innerHTML= "List Result" ;
+  }
+</script>

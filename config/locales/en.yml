@@ -4,7 +4,11 @@ en:
   iphone: "IPHONE"
   samsung: "SAMSUNG"
   other_product: "OTHER PRODUCTS"
+  search_products: "Kết quả tìm kiếm"
   sale_members: "Promotion For Members"
+  search: "Search"
+  search_fail: "Not found result"
+  list_result: "List result"
 
   checkout: "CHECKOUT"
   delete: "Delete"
